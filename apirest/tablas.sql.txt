@@ -1,0 +1,23 @@
+CREATE TABLE `clients` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `first_name` text NOT NULL,
+ `last_name` text NOT NULL,
+ `email` text NOT NULL,
+ `id_client` text NOT NULL,
+ `secret_key` text NOT NULL,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8
+
+CREATE TABLE `companies` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` text NOT NULL,
+ `num_workers` int(11) NOT NULL,
+ `date_create` date NOT NULL,
+ `id_creator` int(11) DEFAULT NULL,
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL,
+ `type` int(11) DEFAULT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8
